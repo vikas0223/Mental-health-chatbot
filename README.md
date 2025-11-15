@@ -20,8 +20,8 @@
 - 🎙️ Voice input via microphone icon
 - 🧘 Tagline: *"your safe space to talk, vent, or just breathe."*
 - ⚡ Powered by Botpress
-- 🔄 Auto-sync with v0.app and GitHub
-- 🌐 Live deployment via Vercel
+- 🔄 Auto-sync with  GitHub
+- 🌐 Live deployment via botpress
 
 ---
 
