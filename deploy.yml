@@ -17,10 +17,15 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.bp_bak_gVN8h6UVEmcBKRVMkuhXesbvxCh64GtYL3sB }}" \
           --output saanjh.bpz
 
-      - name: Commit exported bot file
+            - name: Push exported bot file
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "botpress-export@github.com"
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/vikas0223/Mental-health-chatbot.git
           git add saanjh.bpz
           git commit -m "Automated bot export"
           git push
+
+
