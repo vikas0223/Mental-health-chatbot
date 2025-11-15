@@ -16,7 +16,6 @@ jobs:
           curl -X GET "https://api.botpress.cloud/v1/bots/${{ secrets.daa540a4-a2a2-4e4e-b356-aadab7d3302b }}/export" \
           -H "Authorization: Bearer ${{ secrets.bp_bak_gVN8h6UVEmcBKRVMkuhXesbvxCh64GtYL3sB }}" \
           --output saanjh.bpz
-
       - name: Push exported bot file
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
@@ -27,6 +26,7 @@ jobs:
           git add saanjh.bpz
           git commit -m "Automated bot export"
           git push origin HEAD:main
+
 
 
 
